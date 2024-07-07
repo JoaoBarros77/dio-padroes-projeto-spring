@@ -3,6 +3,7 @@ package dio.padroes_projeto_spring.model;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -10,7 +11,7 @@ public class Estudante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column (length = 100, nullable = false)
     private String nome;
     @Column (nullable = false)
@@ -18,74 +19,69 @@ public class Estudante {
     @ManyToOne
     @JoinColumn (nullable = false)
     private Endereco endereco;
-    @ManyToOne
-    @JoinColumn (nullable = false)
-    private Serie serie;
     @Column (nullable = false)
     private String numeroCelular;
     @Column (length = 100, nullable = false)
     private String email;
 
-    @ManyToOne
-    @JoinColumn (nullable = false)
-    private Disciplina disciplina;
-    public Integer getId() {
+    @ElementCollection
+    @CollectionTable(name = "grade_curricular_estudante", joinColumns = @JoinColumn(name = "estudante_id"))
+    private List<Disciplina> gradeCurricular;
+
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public Serie getSerie() {
-        return serie;
-    }
-
-    public String getNumeroCelular() {
-        return numeroCelular;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
     }
 
     public void setIdade(int idade) {
         this.idade = idade;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
-    public void setSerie(Serie serie) {
-        this.serie = serie;
+    public String getNumeroCelular() {
+        return numeroCelular;
     }
 
     public void setNumeroCelular(String numeroCelular) {
         this.numeroCelular = numeroCelular;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public Disciplina getDisciplina() {
-        return disciplina;
+    public List<Disciplina> getGradeCurricular() {
+        return gradeCurricular;
     }
 
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
+    public void setGradeCurricular(List<Disciplina> gradeCurricular) {
+        this.gradeCurricular = gradeCurricular;
     }
+
 }

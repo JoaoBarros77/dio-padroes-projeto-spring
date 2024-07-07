@@ -1,13 +1,15 @@
 package dio.padroes_projeto_spring.service;
 
+import dio.padroes_projeto_spring.model.Disciplina;
 import dio.padroes_projeto_spring.model.Estudante;
 
 import java.util.Optional;
 
 public interface EstudanteService {
     Iterable<Estudante> buscarTodos();
-    Optional<Estudante> buscarPorId(int id);
+    Optional<Estudante> buscarPorId(Long id);
     void inserirEstudante(Estudante estudante);
-    void atualizarEstudante(int id, Estudante estudante);
-    void removerEstudante(int id);
+    void atualizarEnderecoEstudante(Long id, Estudante estudante);
+    void removerEstudante(Long id);
+//    public void atualizarNotaEstudante(Long id, Estudante estudante, String nomeDisciplina, int notaDisciplina);
 }
