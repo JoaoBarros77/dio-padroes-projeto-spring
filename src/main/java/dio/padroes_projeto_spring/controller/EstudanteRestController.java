@@ -35,11 +35,6 @@ public class EstudanteRestController {
         estudanteService.atualizarEnderecoEstudante(id, estudante);
         return ResponseEntity.ok(estudante);
     }
-//    @PutMapping("/{}")
-//    public ResponseEntity<Estudante> atualizarNotaEstudante(@PathVariable int id, @RequestBody Estudante estudante, @PathVariable String nomeDisciplina, @PathVariable int notaDisciplina){
-//        estudanteService.atualizarNotaEstudante(id, estudante, nomeDisciplina, notaDisciplina);
-//        return ResponseEntity.ok(estudante);
-//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Estudante> removerEstudante(@PathVariable Long id){

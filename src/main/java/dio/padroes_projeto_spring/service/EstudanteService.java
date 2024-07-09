@@ -11,5 +11,4 @@ public interface EstudanteService {
     void inserirEstudante(Estudante estudante);
     void atualizarEnderecoEstudante(Long id, Estudante estudante);
     void removerEstudante(Long id);
-//    public void atualizarNotaEstudante(Long id, Estudante estudante, String nomeDisciplina, int notaDisciplina);
 }

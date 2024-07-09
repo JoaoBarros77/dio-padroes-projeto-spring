@@ -16,7 +16,7 @@ public class Estudante {
     private String nome;
     @Column (nullable = false)
     private int idade;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     @JoinColumn (nullable = false)
     private Endereco endereco;
     @Column (nullable = false)
