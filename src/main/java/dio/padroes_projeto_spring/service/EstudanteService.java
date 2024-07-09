@@ -1,6 +1,5 @@
 package dio.padroes_projeto_spring.service;
 
-import dio.padroes_projeto_spring.model.Disciplina;
 import dio.padroes_projeto_spring.model.Estudante;
 
 import java.util.Optional;

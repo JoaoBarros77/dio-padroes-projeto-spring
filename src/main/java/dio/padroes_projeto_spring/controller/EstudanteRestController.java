@@ -1,6 +1,5 @@
 package dio.padroes_projeto_spring.controller;
 
-import dio.padroes_projeto_spring.model.Disciplina;
 import dio.padroes_projeto_spring.model.Estudante;
 import dio.padroes_projeto_spring.service.EstudanteService;
 import org.springframework.beans.factory.annotation.Autowired;

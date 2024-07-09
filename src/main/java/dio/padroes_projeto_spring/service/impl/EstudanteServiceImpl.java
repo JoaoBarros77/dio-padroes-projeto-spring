@@ -1,10 +1,8 @@
 package dio.padroes_projeto_spring.service.impl;
 
-
 import dio.padroes_projeto_spring.model.Disciplina;
 import dio.padroes_projeto_spring.model.Endereco;
 import dio.padroes_projeto_spring.model.Estudante;
-
 
 import dio.padroes_projeto_spring.repository.DisciplinaRepository;
 import dio.padroes_projeto_spring.repository.EnderecoRepository;

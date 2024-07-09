@@ -2,8 +2,6 @@ package dio.padroes_projeto_spring.model;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Entity
